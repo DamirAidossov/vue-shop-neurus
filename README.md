@@ -1,24 +1,15 @@
-# vue-shop
+# Приложение для отображения событий в магазине
 
-## Project setup
-```
-npm install
-```
+Приложение создано с использованием Vue JS, Vue CLI, Vuex, Bootstrap 5 и Font Awesome 6 для иконок.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Запуск приложения
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1. Склонировать репозиторий
+2. Установить зависимости `npm install`
+3. Запустить приложение в консоли `npm run serve`
+4. Открыть [http://localhost:8080](http://localhost:8080) в браузере
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Важные особенности
+
+1. Кнопка с выводом в консоль была создана только для работы в режиме разработки
