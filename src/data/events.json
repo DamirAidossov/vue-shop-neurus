@@ -10,10 +10,10 @@
   },
   {
     "id": 111106,
-    "type": "put_on",
+    "type": "take_off",
     "timestamp": 1634606230,
     "productName": "Салфетки детские, 50шт",
-    "productCount": 1,
+    "productCount": -3,
     "sessionId": "143c1ddd-be57-4644-ae9a-6b16fee9078b"
   },
   {
