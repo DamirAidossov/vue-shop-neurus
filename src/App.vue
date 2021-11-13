@@ -1,15 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <!-- button only for developer mode -->
+    <button type="button" class="btn btn-warning" @click="logger()">Вывести в консоль текущий state vuex</button>
+    <div class="row justify-content-around">
+      <div class="col-md-6 col-xl-4 col-12 p-3" v-for="(item, index) in this.$store.state.sessions" :key="item.name">
+        <sessionCard 
+          :sessionId="index" 
+          :name="item.name" 
+          :active="item.isActive" 
+          :startTime="item.startTime" 
+          :endTime="item.endTime" 
+          :basket="this.$store.getters.getBasket(index)"/>
+      </div> 
+    </div>
+  </div>
+  
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import sessionCard from './components/sessionCard.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    sessionCard,
+  },
+  methods:{
+    logger(){//function to send in console list of all events in all sessions
+      for(let i in this.$store.state.sessions){
+        console.log('Session id "',this.$store.state.sessions[i].name,'" events: ', this.$store.getters.getSessionEvents(i))
+      }
+    }
   }
 }
 </script>
